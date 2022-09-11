@@ -218,7 +218,7 @@ router.get('/delete/:id', (req, res) => {
 // CMS Login
 router.post('/cms_login', (req, res) => {
     var post = req.body;
-    if (post.username === 'admin' && post.password === 'tstone555') {
+    if (post.username === 'admin' && post.password === '*****') {
         let ran_user_id = (Math.random() + 1).toString(36).substring(7);
         req.session.user_id = ran_user_id;
         res.redirect('/cms');
