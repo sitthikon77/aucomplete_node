@@ -2,7 +2,7 @@ const express = require('express')
 const database = require('./database');
 const mongoose = require('mongoose');
 
-mongoose.connect("mongodb+srv://dream:1234@cluster0.104bm.mongodb.net/test", { useUnifiedTopology: true, useNewUrlParser: true })
+mongoose.connect("mongodb+srv://dream:****@cluster0.104bm.mongodb.net/test", { useUnifiedTopology: true, useNewUrlParser: true })
 const db = mongoose.connection;
 db.on('error', error => console.log(error));
 db.once('open', () => { console.log('Connected to Mongoose') });
