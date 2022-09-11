@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+
+    <link rel="stylesheet" href="../style/index.css">
+    <!-- tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.1/dist/flowbite.min.css" />
+
+</head>
+
+<body>
+    <div id="preloder">
+
+    </div>
+    <div class="mx-5 mb-5" style="font-family: 'Gotham-Bold'; color: #fff; font-size: 1.4rem;">
+        <h1>THE PRIVACY CONSENT</h1>
+    </div>
+    <!-- <p style="font-family: 'Gotham-Bold'; font-size: 1.2rem; color: #FFC10E;">Registration is now closed.</p> -->
+
+    <form class="mx-5 justify-center items-center" method="post" action="/privacy"
+        style="font-family: 'Gotham-Medium','Heavent-li'; font-size: 1rem; display: flex; flex-direction: column;">
+        
+        <div class="flex">
+            <input type="checkbox" style="box-shadow: 3px 3px 4px rgba(223, 221, 221, 0.619);"
+                class="w-4 h-4 text-blue-600 bg-gray-100   text-yellow-400  focus:ring-0 ml-5" required>
+            <img src="../image/t-0.png" class="ml-2 w-72" alt="">
+
+        </div>
+        <img src="../image/t-1.png" class=" w-72" alt="">
+        <div class="flex mt-3">
+            <input type="checkbox" style="box-shadow: 3px 3px 4px rgba(223, 221, 221, 0.619);"
+                class="ml-5 w-4 h-4 text-blue-600 bg-gray-100   text-yellow-400  focus:ring-0" required>
+            <img src="../image/t-2.png" class="ml-2 w-72" alt="">
+        </div>
+        <img src="../image/t-3.png" class="w-72" alt="">
+
+        <div class="flex justify-center items-center mt-3 mb-1">
+            <span class="text-red-700 text-sm">*</span><a
+                href="https://outsystems.pttgcgroup.com/GCPDPA/MainPolicy.aspx?Key=eyJDb21wYW55IjoxMCwiQWN0aXZlVGFiIjoiMSIsIkxhbmciOiIxIn0%3D"
+                style="color: white; font-family: 'Heavent-Cond'; font-weight: 500; font-size: 1.2rem;  text-align: start;">Link
+                for GC PDPA Website</a>
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <button type="submit"><img src="../image/btn_next.png" class="w-32" alt=""></button>
+        </div>
+
+    </form>
+
+
+    <script>
+        var loader = document.getElementById("preloder")
+        window.addEventListener("load", function () {
+            loader.style.display = "none";
+        })
+
+    </script>
+    <script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>
+</body>
+
+</html>

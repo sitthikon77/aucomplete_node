@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        <%= title %>
+    </title>
+
+    <link rel="stylesheet" href="../style/index.css">
+    <!-- tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.1/dist/flowbite.min.css" />
+</head>
+
+<body>
+    <div id="preloder"></div>
+    <div class="mx-10 mb-8" style="font-family: 'Gotham-Bold'; color: #fff; font-size: 1.4rem;">
+        <h1>VISIT FACTORY</h1>
+    </div>
+    <!-- <p style="font-family: 'Gotham-Bold'; font-size: 1.2rem; color: #FFC10E;">Registration is now closed.</p> -->
+    <form action="/register" method="post" class="mx-10" id="ad"
+        style="font-family: 'Gotham-Medium','Heavent-Bd-Cond'; font-size: 1rem; display: flex; flex-direction: column;">
+
+        <div class=" mb-5">
+            <img src="../image/visitfactory2_registration.png" class="w-72" alt="">
+        </div>
+
+        <div class="mx-auto">
+            <div class="flex items-center mb-2">
+                <input onclick="tour()" id="plant" type="radio" name="plant" value="เข้าร่วม" required
+                    class="w-4 h-4 border-gray-300 focus:ring-0 mr-3" style="border-radius: 0;">
+                <img src="../image/visitfactory3_registration.png" class="w-32" alt="">
+            </div>
+
+            <div id="tour" class="mb-4">
+
+            </div>
+
+            <div class="flex items-center mb-4 ">
+                <input onclick="nottour()" id="plant2" type="radio" name="plant" value="ไม่เข้าร่วม"
+                    class="w-4 h-4 border-gray-300 focus:ring-0 mr-3" style="border-radius: 0;">
+                <img src="../image/visitfactory4_registration.png" class="w-44" alt="">
+            </div>
+        </div>
+
+        <div class="flex items-center justify-center">
+            <img src="../image/visitfactory5_registration.png" class="w-60" alt="">
+        </div>
+
+       
+        <span type="button" data-modal-toggle="hidden-modal"></span>
+
+        <div id="hidden-modal" tabindex="-1" class="hidden">
+            <input type="text" name="prefix" id="prefix" value="" />
+            <input type="text" name="fname" id="fname" value="" />
+            <input type="text" name="lname" id="lname" value="" />
+            <input type="text" name="company" id="company" value="" />
+            <input type="text" name="position" id="position" value="" />
+            <input type="text" name="department" id="department" value="" />
+            <input type="text" name="phone" id="phone" value="" />
+            <input type="text" name="email" id="email" value="" />
+            <input type="text" name="follower" id="follower" value="" />
+        </div>
+       
+
+        <div style="display: flex; justify-content: center;" class="">
+            <button type="submit"><img src="../image/btn_next.png" class="w-32" alt=""></button>
+        </div>
+
+
+    </form>
+    <script>
+        var loader = document.getElementById("preloder")
+        window.addEventListener("load", function () {
+            loader.style.display = "none";
+        })
+
+        var register_user = JSON.parse(JSON.parse(window.localStorage.getItem('register_user')));
+
+        document.getElementById('prefix').value = register_user.prefix;
+        document.getElementById('fname').value = register_user.fname;
+        document.getElementById('lname').value = register_user.lname;
+        document.getElementById('company').value = register_user.company;
+        document.getElementById('position').value = register_user.position;
+        document.getElementById('department').value = register_user.department;
+        document.getElementById('phone').value = register_user.phone;
+        document.getElementById('email').value = register_user.email;
+        document.getElementById('follower').value = register_user.follower;
+
+        console.log(register_user.prefix);
+
+
+
+
+        function tour() {
+            var i = 1;
+            document.getElementById("tour").innerHTML = '<div class="flex items-center"><input required id="plant" type="radio" name="tour" value="rHDPE" class=" w-4 h-4 border-gray-300 focus:ring-0 mr-3 ml-6 mb-1" style="border-radius: 0;"> <img src="../image/rh1.png" class="w-36" alt=""></div><div class="flex items-center"><input id="plant" type="radio" name="tour" value="rPET" class="w-4 h-4 border-gray-300 focus:ring-0 mr-3 ml-6 mt-1" style="border-radius: 0;"><img src="../image/rh2.png" class="w-32 mt-1" alt=""></div>'
+        }
+
+        function nottour() {
+            document.getElementById("tour").innerHTML = ''
+        }
+
+    </script>
+    <script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>
+</body>
+
+</html>

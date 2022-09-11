@@ -113,6 +113,35 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Heavent-Bd-Cond';
+    font-size: 1rem;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: gainsboro;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(255, 217, 0);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(255, 217, 0);
+}
+
+::selection {
+    background-color: rgb(255, 217, 0);
+    color: #fff;
 }
 
 html {
@@ -157,4 +186,9 @@ input[type='radio']:checked {
     max-width: 600px;
     width: 95%;
     margin: 20px auto 0 auto;
+}
+
+#searchResult_box:hover {
+    background-color: gray;
+    transition: 0.3s ease-in-out;
 }

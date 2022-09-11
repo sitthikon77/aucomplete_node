@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+
+    <link rel="stylesheet" href="../style/index.css">
+    <!-- tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div id="preloder"></div>
+    <!-- <div class="m-10 -mt-10">
+        <a href="/privacy"><img src="../image/btn_enter.png" class="w-40" alt=""></a>
+    </div> -->
+    <!-- <p style="font-family: 'Gotham-Bold'; font-size: 1.2rem; color: #FFC10E;">Registration is now closed.</p> -->
+    <div class="mx-10 mb-8" style="font-family: 'Gotham-Bold'; color: #fff; font-size: 1.4rem;">
+        <h1>REGISTRATION</h1>
+    </div>
+    <form onsubmit="signup()"  action="/registration" method="post" id="user_register" class="mx-10"
+        style="font-family: 'db_heaventbold'; font-size: 1.2rem; display: flex; flex-direction: column;">
+        
+        <select name="prefix" id="prefix" style="box-shadow: 5px 5px 4px rgba(209, 200, 200, 0.518);"
+            class="focus:outline-0 mb-2  bg-gray-50  text-gray-900  w-72 h-8 px-2.5 border-0 shadow-lg shadow-white">
+            <option selected="Mr.">Mr.</option>
+            <option value="Ms.">Ms.</option>
+            <option value="Mrs.">Mrs.</option>
+        </select>
+
+        <input type="text" name="fname" id="fname" placeholder="Firs Name*"
+            style="box-shadow: 5px 5px 4px rgba(209, 200, 200, 0.518);"
+            class="focus:outline-0 mb-2  text-gray-900   w-72 h-8 px-2.5 border-0 shadow-lg shadow-white" required />
+        <input type="text" name="lname" id="lname" placeholder="Surname*"
+            style="box-shadow: 5px 5px 4px rgba(209, 200, 200, 0.518);"
+            class="focus:outline-0 mb-2  text-gray-900    w-72 h-8 px-2.5 border-0 shadow-lg shadow-white" required />
+        <input type="text" name="company" id="company" placeholder="Company*"
+            style="box-shadow: 5px 5px 4px rgba(209, 200, 200, 0.518);"
+            class="focus:outline-0 mb-2   text-gray-900   w-72 h-8 px-2.5 border-0 shadow-lg shadow-white" required />
+        <input type="text" name="position" id="position" placeholder="Position*"
+            style="box-shadow: 5px 5px 4px rgba(209, 200, 200, 0.518);"
+            class="focus:outline-0 mb-2    text-gray-900    w-72 h-8 px-2.5 border-0 shadow-lg shadow-white" required />
+        <input type="text" name="department" id="department" placeholder="Department*"
+            style="box-shadow: 5px 5px 4px rgba(209, 200, 200, 0.518);"
+            class="focus:outline-0 mb-2    text-gray-900   w-72 h-8 px-2.5 border-0 shadow-lg shadow-white" required />
+        <input type="tel" name="phone" id="phone"  placeholder="Mobile*" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+            style="box-shadow: 5px 5px 4px rgba(209, 200, 200, 0.518);"
+            class="focus:outline-0 mb-2    text-gray-900    w-72 h-8 px-2.5 border-0 shadow-lg shadow-white" required />
+        <input type="email" name="email" id="email" placeholder="Email*"
+            style="box-shadow: 5px 5px 4px rgba(209, 200, 200, 0.518);"
+            class="focus:outline-0 mb-2   text-gray-900   w-72 h-8 px-2.5 border-0 shadow-lg shadow-white" required /> 
+        <div>
+            <img src="../image/text2_registration.png" class="w-32 mt-2" alt="">
+        </div>
+        
+        <div  style="display: flex; justify-content: center;">
+            <button type="submit"><img src="../image/btn_next.png" class="w-32" alt=""></button>
+        </div>
+    </form>
+    <script src="scrip.js"></script>
+    <script>
+
+
+        var loader = document.getElementById("preloder")
+        window.addEventListener("load", function () {
+            loader.style.display = "none";
+        })
+
+        var register_user = JSON.parse(JSON.parse(window.localStorage.getItem('register_user')));
+
+        document.getElementById('prefix').value = register_user.prefix;
+        document.getElementById('fname').value = register_user.fname;
+        document.getElementById('lname').value = register_user.lname;
+        document.getElementById('company').value = register_user.company;
+        document.getElementById('position').value = register_user.position;
+        document.getElementById('department').value = register_user.department;
+        document.getElementById('phone').value = register_user.phone;
+        document.getElementById('email').value = register_user.email;
+        document.getElementById('follower').value = register_user.follower;
+    </script>
+</body>
+
+</html>

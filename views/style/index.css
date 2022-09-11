@@ -1,0 +1,152 @@
+@font-face {
+    font-family: 'Gotham-Black';
+    src: url('Gotham-Black.woff2') format('woff2'),
+         url('Gotham-Black.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Gotham-Bold';
+    src: url('Gotham-Bold.woff2') format('woff2'),
+         url('Gotham-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Gotham-Light';
+    src: url('Gotham-Light.woff2') format('woff2'),
+         url('Gotham-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Gotham-Medium';
+    src: url('Gotham-Medium.woff2') format('woff2'),
+         url('Gotham-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Heavent-Bd-Cond-it';
+    src: url('Heavent\ Bd\ Cond\ It\ v3.2.1.woff2') format('woff2'),
+         url('Heavent\ Bd\ Cond\ It\ v3.2.1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Heavent-Bd-Cond';
+    src: url('Heavent\ Bd\ Cond\ v3.2.1.woff2') format('woff2'),
+         url('Heavent\ Bd\ Cond\ v3.2.1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Heavent-Cond-it';
+    src: url('Heavent\ Cond\ It\ v3.2.1.woff2') format('woff2'),
+         url('Heavent\ Cond\ It\ v3.2.1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Heavent-Bd';
+    src: url('AnyConv.com__DB_Heavent_Bd.woff2') format('woff2'),
+         url('AnyConv.com__DB_Heavent_Bd.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Heavent-li';
+    src: url('AnyConv.com__DB_Heavent_Li.woff2') format('woff2'),
+         url('AnyConv.com__DB_Heavent_Li.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Heavent-thin';
+    src: url('AnyConv.com__db_heavent_thin.woff2') format('woff2'),
+         url('AnyConv.com__db_heavent_thin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Heavent-Cond';
+    src: url('Heavent\ Cond\ v3.2.1.woff2') format('woff2'),
+         url('Heavent\ Cond\ v3.2.1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'db_heaventbold';
+    src: url('db_heavent_bd_v3.2.1-webfont.woff2') format('woff2'),
+         url('db_heavent_bd_v3.2.1-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background: linear-gradient(#2075BC, #1C4A9C);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type='radio'] {
+    box-sizing: border-box;
+    appearance: none;
+    background: white;
+    border: 1px solid white;
+    width: 16px;
+    height: 16px;
+    box-shadow: 3px 3px 4px rgba(223, 221, 221, 0.619);
+  }
+  input[type='radio']:checked {
+    background: #FFC10E;
+  }
+
+#preloder{
+    background: #1C4A9C url('../image/preloader.gif') no-repeat center center;
+    background-size: 10%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+}

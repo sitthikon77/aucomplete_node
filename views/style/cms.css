@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kanit', sans-serif;
+  font-style: normal;
+  font-size: 0.8rem;
+}
+
+
+
+@media (min-width: 200px) and (max-width: 699px) {
+
+  #no-more-tables tbody,
+  #no-more-tables tr,
+  #no-more-tables td {
+    text-align: start;
+    display: block;
+    font-size: 0.8rem;
+  }
+
+  #no-more-tables thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  #no-more-tables td {
+    position: relative;
+    padding-left: 50%;
+  }
+
+  #no-more-tables td:before {
+    content: attr(data-title);
+    position: absolute;
+    left: 6px;
+    font-weight: bold;
+  }
+
+}
+
+@media (min-width: 700px) and (max-width: 1500px) {
+
+  #no-more-tables tbody,
+  #no-more-tables tr,
+  #no-more-tables td {
+    text-align: start;
+    display: block;
+    font-size: 0.9rem;
+  }
+
+  #no-more-tables thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  #no-more-tables td {
+    position: relative;
+    padding-left: 50%;
+  }
+
+  #no-more-tables td:before {
+    content: attr(data-title);
+    position: absolute;
+    left: 6px;
+    font-weight: bold;
+  }
+
+}

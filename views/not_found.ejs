@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
+    <title>Envicco Autocomplete</title>
     <link rel="stylesheet" href="../style/search.css">
 
     <!-- tailwind CSS -->
@@ -14,23 +14,21 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <div id="preloder"></div>
+    <div id="preloder">
+
+    </div>
     <div class="mx-5 d-flex justify-content-center">
-        <img src="../image/text_index.png" class="mb-3" alt="">
-
+        <img src="../image/error.png" class="w-80" class="mb-3" alt="">
     </div>
-    <div class="mx-5 mb-3 d-flex justify-content-center">
-        <img src="../image/text2_index.png" class="" alt="">
 
-    </div>
-    <div class="mx-5 mb-1 d-flex justify-content-center">
-        <img src="../image/suc.png" class="w-64" alt="">
 
-    </div>
-    <a href="/search"><img src="../image/btn_back.png" alt="" class="w-40"></a>
+
     <script>
         var loader = document.getElementById("preloder")
         window.addEventListener("load", function () {

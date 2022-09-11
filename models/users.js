@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
 
+const mongoose = require('mongoose');
 const userSchema = new mongoose.Schema({
     prefix: {
         type: String,
@@ -34,7 +34,7 @@ const userSchema = new mongoose.Schema({
     phone: {
         type: String,
         required: true,
-        index: { unique: true, dropDups: true },
+        index: { unique: false, dropDups: false },
         default: "-"
     },
     email: {
@@ -62,10 +62,20 @@ const userSchema = new mongoose.Schema({
         required: false,
         default: "ยังไม่มา"
     },
+    gift: {
+        type: String,
+        required: false,
+        default: "ยังไม่ได้รับ"
+    },
+    note: {
+        type: String,
+        required: false,
+        default: "-"
+    },
     created: {
         type: Date,
         required: true,
         default: Date.now,
     },
 });
-module.exports = mongoose.model("Test", userSchema);
+module.exports = mongoose.model('test', userSchema);

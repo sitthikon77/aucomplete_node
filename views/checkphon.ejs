@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.1/dist/flowbite.min.css" />
+    <link rel="stylesheet" href="../style/index.css">
+
+</head>
+
+<body>
+    
+    <img src="../image/preloader.gif" class="w-10 mb-2" alt="" alt="">
+    <form action="/registration" method="post" class="mx-10 items-center justify-center">
+        
+        <!-- <img src="../image/pre.png" class="w-80" alt=""> -->
+        
+        <!-- form_hide  -->
+        <span type="button" data-modal-toggle="hidden-modal"></span>
+
+        <div id="hidden-modal" tabindex="-1" class="hidden">
+            <input type="text" name="phone" id="phone" value="" /> 
+        </div>
+        <!-- ------  -->
+
+        <div style="display: flex; justify-content: center;" class="hidden">
+            <button type="submit" id="e"></button>
+        </div>
+
+
+    </form>
+    <script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>
+    <script>
+        setTimeout(function() {
+            document.getElementById('e').click();
+        }, 1000);
+
+        var register_user = JSON.parse(JSON.parse(window.localStorage.getItem('register_user')));
+
+        document.getElementById('phone').value = register_user.phone;
+
+        
+    </script>
+
+</body>
+
+</html>
